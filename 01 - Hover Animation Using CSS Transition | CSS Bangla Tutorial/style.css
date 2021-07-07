@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+.sneak-peak-section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(images/bg.jpg);
+    border: 15px solid #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sneak-peak-wrappers {
+    width: 500px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+}
+.sneak-peak-wrappers img {
+    width: 100%;
+}
+.sneak-peak-wrappers .left, 
+.sneak-peak-wrappers .right, 
+.sneak-peak-wrappers .text {
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.sneak-peak-wrappers .left {
+    width: 900px;
+    bottom: -170px;
+    transform: rotate(30deg);
+    right: 250px;
+    transition: all 0.3s ease-in-out;
+}
+.sneak-peak-wrappers .right {
+    width: 650px;
+    bottom: -50px;
+    left: 360px;
+    transform: rotate(-15deg);
+    transition: all 0.2s ease-in-out;
+}
+.sneak-peak-wrappers .text {
+    top: 40px;
+    background-color: #fff;
+    height: fit-content;
+    line-height: 1;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 3px solid #000;
+    border-bottom-width: 5px;
+    border-radius: 10px;
+    right: 6rem;
+    padding: 15px 40px 12px;
+    z-index: -1;
+    transform: rotate(-10deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Added */
+.sneak-peak-wrappers:hover .left {
+    opacity: 1;
+    visibility: visible;
+    width: 500px;
+    transform: rotate(0deg);
+    bottom: -50px;
+    right: 350px;
+}
+.sneak-peak-wrappers:hover .right {
+    opacity: 1;
+    visibility: visible;
+    width: 350px;
+    transform: rotate(0deg);
+    left: 420px;
+    bottom: 0;
+}
+.sneak-peak-wrappers:hover .text {
+    opacity: 1;
+    visibility: visible;
+    right: -180px;
+    top: 20px;
+}
