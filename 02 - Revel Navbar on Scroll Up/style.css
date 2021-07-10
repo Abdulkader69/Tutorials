@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+/* ==================== Default CSS End ================== */
+
+
+/* ==================== Header ================== */
+header#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+}
+header#main-header.scroll-down {
+	transform: translate3d(0, -100%, 0);
+}
+
+header#main-header.scroll-up {
+	filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    background-color: #ffffff;
+}
+
+header#main-header .row {
+    align-items: center;
+}
+header#main-header .logo img {
+    width: 70px;
+}
+header#main-header .main-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header#main-header .main-menu ul li {
+    margin-left: 50px;
+    position: relative;
+}
+header#main-header .main-menu ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0B2458;
+    text-transform: uppercase;
+}
+/* ==================== Header ================== */
+
+
+
+
+/* ==================== Page Style Sheet ================== */
+.container {
+    width: 100%;
+    max-width: 1410px;
+    padding: 0 15px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-md-6 {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.first-section {
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+.first-section img {
+    object-fit: cover;
+    width: 100%;
+    object-position: top;
+}
+.second-section {
+    padding: 100px 0;
+}
+.third-section {
+    padding-bottom: 50px;
+}
+.image {
+    border-radius: 20px;
+}
+.content h2 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: -8px;
+}
+.content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.content p {
+    margin-bottom: 20px;
+}
+/* ==================== Page Style Sheet ================== */
+
+@media only screen and ( max-width: 767px ) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
